@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  mic:
+  frontend:
     build: ../Micro-Frontend/
     image: micro-frontend-image
     container_name: micro-frontend-container
