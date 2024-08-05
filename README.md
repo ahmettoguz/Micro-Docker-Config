@@ -9,21 +9,27 @@ docker-compose -p micro up -d frontend
 docker-compose ls
 ```
 
+<hr/> 
+<br/>
+
 ## Table of Contents
 
-- [Release 1.1.0](#release/1.1.0)
-- [Release 1.0.0](#release/1.0.0)
+- [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=470137&color=077521)](#release/1.1.0)
+- [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=470137&color=077521)](#release/1.0.0)
+
+<hr/> 
+<br/>
 
 # Releases
 
 <h2 id="release/1.1.0">Release 1.1.0</h2> 
 
-| Service               | Version                                                                                                                                                                                   |
-|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Micro-Docker-Config   | [![Static Badge](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/1.1.0)   |
-| Micro-Backend         | [![Static Badge](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Backend/tree/release/1.0.0)         |
-| Micro-Email-Service   | [![Static Badge](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Email-Service/tree/release/1.0.0)   |
-| Micro-Frontend        | [![Static Badge](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/1.0.0)        |
+| Service               | Version                                                                                                                                                                           |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Micro-Docker-Config   | [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/1.1.0)   |
+| Micro-Backend         | [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Backend/tree/release/1.0.0)         |
+| Micro-Email-Service   | [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Email-Service/tree/release/1.0.0)   |
+| Micro-Frontend        | [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/1.0.0)        |
 
 ### Features
 
@@ -51,11 +57,11 @@ docker-compose ls
 
 <h2 id="release/1.0.0">Release 1.0.0</h2> 
 
-| Service               | Version                                                                                                                                                                                   |
-|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Micro-Docker-Config   | [![Static Badge](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/1.0.0)   |
-| Micro-Backend         | [![Static Badge](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Backend/tree/release/1.0.0)         |
-| Micro-Frontend        | [![Static Badge](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/1.0.0)        |
+| Service               | Version                                                                                                                                                                           |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Micro-Docker-Config   | [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/1.0.0)   |
+| Micro-Backend         | [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Backend/tree/release/1.0.0)         |
+| Micro-Frontend        | [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/1.0.0)        |
 
 ### Features
 
