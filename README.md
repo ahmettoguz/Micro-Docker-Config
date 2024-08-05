@@ -15,7 +15,7 @@ docker-compose ls
 ## Table of Contents
 
 - [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=470137&color=077521)](#release/1.1.0)
-- [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=470137&color=077521)](#release/1.0.0)
+- [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=release&labelColor=470137&color=077521)](#release/1.0.0)
 
 <hr/> 
 <br/>
