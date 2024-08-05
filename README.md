@@ -9,6 +9,11 @@ docker-compose -p micro up -d frontend
 docker-compose ls
 
 -------------------------------------------- Release 1.1.0 --------------------------------------------
+------|  Micro-Docker-Config --->  release/1.1.0
+------|  Micro-Backend --------->  release/1.0.0
+------|  Micro-Email-Service --->  release/1.0.0
+------|  Micro-Frontend -------->  release/1.0.0
+
 + frontend react app is dockerized
 + backend spring boot app is dockerized
 + spring boot env variables adjusted
