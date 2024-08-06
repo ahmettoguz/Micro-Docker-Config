@@ -35,15 +35,25 @@
 
 <h2 id="limitations">🚧 Limitations</h2>
 
-- frontend and backend communication is established over url not docker
-- backend do not have swagger documentation
-- frontend cannot send email
-- frontend do not have env variables
-- ssl is not set up for backend and frontend
-- backend service is available to public
-- no database
-- no database ui
-- no database initializer
+
+### Frontend
+
+- Lack of env variables support.
+- Lack of internal communication between backend service.
+- Lack of TLS/HTTPS support.
+- Lack of email service integration.
+
+
+### Backend
+
+- Lack of internal communication with frontend.
+- Lack of TLS/HTTPS support.
+- Lack of Swagger api documentation.
+
+### Email Service
+
+- Lack of internal communication with frontend.
+- Not available.
 
 <br/>
   
