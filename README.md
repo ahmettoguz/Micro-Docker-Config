@@ -1,18 +1,17 @@
-## 🚀 System Startup
-```
-docker-compose -p micro up -d --build
+<h1 id="top" align="center">🚢 Release Version 1.1.0 </h1> 
 
-docker-compose -p micro down
-
-docker-compose -p micro up -d frontend
-
-docker-compose ls
-```
-
-<hr/> 
 <br/>
 
-<h2 id="release/1.1.0">📦 Release Version 1.1.0</h2> 
+## 🔍 Table of Contents
+
+- [Service Versions](#service-versions)
+- [Features](#features)
+- [Limitations](#limitations)
+- [System Startup](#system-startup)
+ 
+<br/>
+
+<h2 id="service-versions">🧩 Service Versions</h2> 
 
 | Service               | Version                                                                                                                                                                           |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -21,7 +20,9 @@ docker-compose ls
 | Micro-Email-Service   | [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Email-Service/tree/release/1.0.0)   |
 | Micro-Frontend        | [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/1.0.0)        |
 
-### 🔥 Features
+<br/>
+
+<h2 id="features">🔥 Features</h2>
 
 + frontend react app is dockerized
 + backend spring boot app is dockerized
@@ -30,7 +31,9 @@ docker-compose ls
 + email service is available
 + email service has swagger documentation
 
-### 🚧 Limitations
+<br/>
+
+<h2 id="limitations">🚧 Limitations</h2>
 
 - frontend and backend communication is established over url not docker
 - backend do not have swagger documentation
@@ -42,4 +45,16 @@ docker-compose ls
 - no database ui
 - no database initializer
 
-<hr/>
+<br/>
+  
+<h2 id="system-startup">🚀 System Startup</h2> 
+
+```
+docker-compose -p micro up -d --build
+
+docker-compose -p micro down
+
+docker-compose ls
+```
+
+[🔝](#top)
