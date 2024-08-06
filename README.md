@@ -24,20 +24,34 @@
 
 <h2 id="features">🔥 Features</h2>
 
-+ frontend react app is dockerized
-+ backend spring boot app is dockerized
-+ spring boot env variables adjusted
-+ frontend can send request to backend
+
+### Frontend
+
++ The application has been containerized using Docker.
++ Integration with the backend is complete.
+
+### Backend
+
++ The application has been containerized using Docker.
 
 <br/>
 
 <h2 id="limitations">🚧 Limitations</h2>
 
-- frontend do not have env variables
-- frontend and backend communication is established over url not docker
-- ssl is not set up for backend and frontend
-- backend service is available to public
-- email service is not available
+### Frontend
+
+- Lack of env variables support.
+- Lack of internal communication between backend service.
+- Lack of TLS/HTTPS support.
+
+
+### Backend
+
+- Lack of TLS/HTTPS support.
+
+### Email Service
+
+- Not available.
 
 <br/>
   
