@@ -3,7 +3,7 @@
 <br>
 
 <div align="center">
-    <img width=200 src="assets/banner.png">
+    <img width=300 src="assets/banner/banner.png">
 </div>
 
 ## 🔍 Table of Contents
