@@ -6,7 +6,7 @@
 
 - [Service Versions](#service-versions)
 - [Features](#features)
-- [Limitations](#limitations)
+- [Next Release Features](#next-release-features)
 - [System Startup](#system-startup)
  
 <br/>
@@ -24,34 +24,27 @@
 
 <h2 id="features">🔥 Features</h2>
 
-
 ### Frontend
-
 + The application has been containerized using Docker.
 + Integration with the backend is complete.
 
 ### Backend
-
 + The application has been containerized using Docker.
 
 <br/>
 
-<h2 id="limitations">🚧 Limitations</h2>
+<h2 id="next-release-features">🚧 Next Release Features</h2>
 
 ### Frontend
-
-- Lack of env variables support.
-- Lack of internal communication between backend service.
-- Lack of TLS/HTTPS support.
-
+- Env variable support.
+- Internal communication between backend service.
+- TLS/HTTPS support.
 
 ### Backend
-
-- Lack of TLS/HTTPS support.
+- TLS/HTTPS support.
 
 ### Email Service
-
-- Not available.
+- Service availability.
 
 <br/>
   
