@@ -6,7 +6,7 @@
 
 - [Service Versions](#service-versions)
 - [Features](#features)
-- [Limitations](#limitations)
+- [Next Release Features](#next-release-features)
 - [System Startup](#system-startup)
  
 <br/>
@@ -24,36 +24,41 @@
 
 <h2 id="features">🔥 Features</h2>
 
-+ frontend react app is dockerized
-+ backend spring boot app is dockerized
-+ spring boot env variables adjusted
+### Frontend
++ The application has been Dockerized.
 + frontend can send request to backend
-+ email service is available
-+ email service has swagger documentation
+
+### Backend
++ The application has been Dockerized.
++ Environment variables have been adjusted.
+
+### Email Service
++ Service is available.
++ Swagger documentation has been integrated.
+
 
 <br/>
 
-<h2 id="limitations">🚧 Limitations</h2>
-
+<h2 id="next-release-features">🚧 Next Release Features</h2>
 
 ### Frontend
 
-- Lack of env variables support.
-- Lack of internal communication between backend service.
-- Lack of TLS/HTTPS support.
-- Lack of email service integration.
+- Env variable support.
+- Internal communication between backend service.
+- TLS/HTTPS support.
+- Email service integration.
 
 
 ### Backend
 
-- Lack of internal communication with frontend.
-- Lack of TLS/HTTPS support.
-- Lack of Swagger api documentation.
+- Internal communication with frontend.
+- TLS/HTTPS support.
+- Swagger api documentation.
 
 ### Email Service
 
-- Lack of internal communication with frontend.
-- Not available.
+- Communication with frontend.
+- Internal communication with frontend.
 
 <br/>
   
