@@ -15,14 +15,14 @@ services:
     image: micro-backend-image
     container_name: micro-backend-container
     ports:
-      - "8081:80"
+      - "8081:8081"
 
   email-service:
     build: ../Micro-Email-Service/
     image: micro-email-image
     container_name: micro-email-container
     ports:
-      - "8082:80"
+      - "8082:8082"
     depends_on:
       - backend
       - frontend
