@@ -69,11 +69,13 @@
 - TLS/HTTPS support.
 
 ### Backend
+- Internal communication with frontend.
 - TLS/HTTPS support.
 
 ### Email Service
-- Service availability.
-
+- Internal communication with frontend.
+- TLS/HTTPS support.
+  
 <br/>
   
 <h2 id="system-startup">🚀 System Startup</h2> 
