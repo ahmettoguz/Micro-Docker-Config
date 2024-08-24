@@ -25,8 +25,8 @@ services:
     build: ../Micro-Frontend/
     image: micro-frontend-image
     container_name: micro-frontend-container
-    ports:
-      - "8000:80"
+    # ports:
+    #   - "8000:80"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.frontend.rule=Host(`front.localhost`)"
