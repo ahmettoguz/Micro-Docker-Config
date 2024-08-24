@@ -37,15 +37,22 @@ services:
     build: ../Micro-Backend/
     image: micro-backend-image
     container_name: micro-backend-container
-    ports:
-      - "8081:80"
+    # ports:
+    #   - "8081:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend.rule=Host(`backend.localhost`)"
+      - "traefik.http.routers.backend.entrypoints=websecure"
+      - "traefik.http.routers.backend.tls=true"
 
   email-service:
     build: ../Micro-Email-Service/
     image: micro-email-image
     container_name: micro-email-container
-    ports:
-      - "8082:80"
-    depends_on:
-      - backend
-      - frontend
+    # ports:
+    #   - "8082:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.email-service.rule=Host(`email-service.localhost`)"
+      - "traefik.http.routers.email-service.entrypoints=websecure"
+      - "traefik.http.routers.email-service.tls=true"
