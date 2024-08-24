@@ -1,0 +1,3 @@
+# cert file includes .selfsigned.crt, selfsigned.key files
+*.key
+*.crt

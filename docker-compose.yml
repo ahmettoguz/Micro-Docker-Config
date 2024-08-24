@@ -1,15 +1,34 @@
 version: '3.8'
 services:
 
+  reverse-proxy: 
+    image: traefik:v2.4
+    container_name: reverse-proxy
+    command: --api.insecure=true --providers.docker
+    ports:
+      - 80:80
+      - 443:443
+      - 9000:8080 #Management UI
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik-conf/traefik.yml:/etc/traefik/traefik.yml
+      - ./cert/selfsigned.crt:/etc/traefik/certs/selfsigned.crt
+      - ./cert/selfsigned.key:/etc/traefik/certs/selfsigned.key
+      - ./traefik-conf/traefik_dynamic.yml:/etc/traefik/traefik_dynamic.yml
+
   frontend:
     build: ../Micro-Frontend/
     image: micro-frontend-image
     container_name: micro-frontend-container
     ports:
-      - "8080:80"
-    depends_on:
-      - backend
-
+      - "8000:80"
+    labels: 
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.rule=Host(`front.localhost`)"
+      # - "traefik.http.services.frontend.loadbalancer.server.port=8000"
+      - "traefik.http.routers.frontend.entrypoints=websecure"
+      - "traefik.http.routers.frontend.tls=true"
+      
   backend:
     build: ../Micro-Backend/
     image: micro-backend-image
