@@ -8,7 +8,7 @@ tls:
 http:
   routers:
     traefik:
-      rule: "Host(`monitor.localhost`)"
+      rule: "Host(`traefik.localhost`)"
       entryPoints: websecure
       service: api@internal
       tls: true
