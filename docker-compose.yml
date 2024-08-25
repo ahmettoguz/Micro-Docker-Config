@@ -9,9 +9,9 @@ services:
       - 443:443
       # - 9000:8080 # dashboard
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./traefik-conf/traefik.yml:/etc/traefik/traefik.yml:ro
-      - ./traefik-conf/traefik_dynamic.yml:/etc/traefik/traefik_dynamic.yml:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik-conf/traefik.yml:/traefik.yml
+      - ./traefik-conf/traefik-dynamic.yml:/etc/traefik/dynamic/traefik-dynamic.yml
       - ./cert/selfsigned.crt:/etc/traefik/certs/selfsigned.crt
       - ./cert/selfsigned.key:/etc/traefik/certs/selfsigned.key
 
