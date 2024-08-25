@@ -6,7 +6,6 @@ providers:
   docker:
     watch: true
     exposedByDefault: false
-    swarmMode: false
   file:
     filename: /etc/traefik/traefik_dynamic.yml
 

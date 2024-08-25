@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   reverse-proxy:
-    image: traefik:v2.4
+    image: traefik
     container_name: reverse-proxy
     command: --api.insecure=true --providers.docker
     ports:
@@ -16,7 +16,7 @@ services:
       - ./traefik-conf/traefik_dynamic.yml:/etc/traefik/traefik_dynamic.yml
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`traefik.localhost`)" # dashboard
+      - "traefik.http.routers.traefik.rule=Host(`${TRAEFIK_DOMAIN}`)" # dashboard
       - "traefik.http.routers.traefik.entrypoints=websecure"
       - "traefik.http.routers.traefik.service=api@internal"
       - "traefik.http.routers.traefik.tls=true"
@@ -29,7 +29,7 @@ services:
     #   - "8000:80"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.frontend.rule=Host(`frontend.localhost`)"
+      - "traefik.http.routers.frontend.rule=Host(`${FRONTEND_DOMAIN}`)"
       - "traefik.http.routers.frontend.entrypoints=websecure"
       - "traefik.http.routers.frontend.tls=true"
 
@@ -41,7 +41,7 @@ services:
     #   - "8081:80"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.backend.rule=Host(`backend.localhost`)"
+      - "traefik.http.routers.backend.rule=Host(`${BACKEND_DOMAIN}`)"
       - "traefik.http.routers.backend.entrypoints=websecure"
       - "traefik.http.routers.backend.tls=true"
 
@@ -53,6 +53,6 @@ services:
     #   - "8082:80"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.email-service.rule=Host(`email-service.localhost`)"
+      - "traefik.http.routers.email-service.rule=Host(`${EMAIL_SERVICE_DOMAIN}`)"
       - "traefik.http.routers.email-service.entrypoints=websecure"
       - "traefik.http.routers.email-service.tls=true"
