@@ -9,17 +9,11 @@ services:
       - 443:443
       # - 9000:8080 # dashboard
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./traefik-conf/traefik.yml:/etc/traefik/traefik.yml
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik-conf/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./traefik-conf/traefik_dynamic.yml:/etc/traefik/traefik_dynamic.yml:ro
       - ./cert/selfsigned.crt:/etc/traefik/certs/selfsigned.crt
       - ./cert/selfsigned.key:/etc/traefik/certs/selfsigned.key
-      - ./traefik-conf/traefik_dynamic.yml:/etc/traefik/traefik_dynamic.yml
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`${TRAEFIK_DOMAIN}`)" # dashboard
-      - "traefik.http.routers.traefik.entrypoints=websecure"
-      - "traefik.http.routers.traefik.service=api@internal"
-      - "traefik.http.routers.traefik.tls=true"
 
   frontend:
     build: ../Micro-Frontend/
@@ -27,11 +21,6 @@ services:
     container_name: micro-frontend-container
     # ports:
     #   - "8000:80"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.frontend.rule=Host(`${FRONTEND_DOMAIN}`)"
-      - "traefik.http.routers.frontend.entrypoints=websecure"
-      - "traefik.http.routers.frontend.tls=true"
 
   backend:
     build: ../Micro-Backend/
@@ -39,11 +28,6 @@ services:
     container_name: micro-backend-container
     # ports:
     #   - "8081:80"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.backend.rule=Host(`${BACKEND_DOMAIN}`)"
-      - "traefik.http.routers.backend.entrypoints=websecure"
-      - "traefik.http.routers.backend.tls=true"
 
   email-service:
     build: ../Micro-Email-Service/
@@ -51,8 +35,3 @@ services:
     container_name: micro-email-container
     # ports:
     #   - "8082:80"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.email-service.rule=Host(`${EMAIL_SERVICE_DOMAIN}`)"
-      - "traefik.http.routers.email-service.entrypoints=websecure"
-      - "traefik.http.routers.email-service.tls=true"

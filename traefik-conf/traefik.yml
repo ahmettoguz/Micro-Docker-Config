@@ -7,11 +7,13 @@ providers:
     watch: true
     exposedByDefault: false
   file:
-    filename: /etc/traefik/traefik_dynamic.yml
+    directory: /etc/traefik/
+    filename: traefik_dynamic.yml
 
 #Logging
 log:
-  level: INFO
+  # level: INFO
+  level: DEBUG
 
 #Entrypoints
 entryPoints:
