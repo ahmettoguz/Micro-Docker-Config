@@ -36,11 +36,11 @@ http:
       loadBalancer:
         servers:
           - url: "http://micro-frontend-container:80"
-        #   - url: "http://host.docker.internal:5173"
-        # healthCheck:
-        #   path: /
-        #   interval: "10s"
-        #   timeout: "6s"
+          - url: "http://host.docker.internal:5173"
+        healthCheck:
+          path: /
+          interval: "10s"
+          timeout: "6s"
 
     backend-service:
       loadBalancer:
