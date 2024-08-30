@@ -51,11 +51,17 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 &nbsp; [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 
+&nbsp; [![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
+
+&nbsp; [![MUI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)](https://mui.com/material-ui/)
+
 &nbsp; [![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-&nbsp; [![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+&nbsp; [![Axios](https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white)](https://axios-http.com/)
 
-&nbsp; [![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)]([https://vitejs.dev/](https://eslint.org/))
+&nbsp; [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+
+&nbsp; [![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/)
 
 &nbsp; ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
@@ -63,15 +69,32 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 &nbsp; ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
+### Test
+
+&nbsp; [![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
+
+
 <br/>
 
 <h2 id="features">🔥 Features</h2>
 
+### Configuration
+
++ **Traefik Load Balancing:** Load balancing configured through Traefik for improved scalability and also local service development.
++ **Traefik Router:** Routing configured through Traefik for service communication without exposing port to public.
++ **Centralized SSL Security:** Centralized self-signed SSL certificate configuration across all services.
++ **Traefik Dashboard:** Dashboard integrated for monitoring and managing Traefik services, routers and prefixes.
++ **Traefik Integration:** Traefik integrated for networking.
++ **Docker-Compose Configuration:** Comprehensive Docker-Compose configuration for managing service orchestration.
++ **Docker Containerization:** The application is containerized for consistent deployment.
+
 ### Frontend
 
-+ **External Communication:** Manages interaction between backend and email service.
-+ **Global State Management:** Implemented using Redux for consistent state handling across the application.
-+ **Persistent Settings:** Language, theme mode, and theme schema are remembered using localStorage.
++ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
++ **Traefik Integration:** Integration with Traefik for efficient load balancing and port forwarding within the application's microservices architecture.
++ **External Communication:** Manages communication between backend and email service.
++ **Global State Management:** Redux implementation for consistent state handling across the application.
++ **Persistent Settings:** Language, theme mode, and theme schema are stored in localStorage.
 + **Internationalization:** Language support with i18n for a multilingual user experience.
 + **Custom Scrollbar Design:** Unique scrollbar styling to match the application's aesthetic.
 + **Floating Action Button:** A "Go to Top" button for improved navigation.
@@ -84,27 +107,31 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 + **Responsive Design:** Optimized for different screen sizes and devices.
 + **Material-UI Integration:** Extensive use of Material-UI components.
 + **Environment Variables:** Support for environment variables to manage configurations.
-+ **Docker Containerization:** The application has been containerized using Docker.
-+ **Backend Integration:** Integration with the backend is complete.
++ **Docker Containerization:** The application is containerized for consistent deployment.
++ **Backend Integration:** Integration with the backend service.
 
 ### Backend
 
++ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
-+ **Swagger Documentation:** Comprehensive API documentation integrated for easier development.
++ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
 + **Environment Variables:** Configurations have been adjusted for enhanced flexibility.
-+ **Dockerized Application:** The application is containerized for consistent deployment and scaling.
++ **Dockerized Application:** The application is containerized for consistent deployment.
 
 ### Email Service
 
-+ **External Frontend Communication:** Seamlessly integrates with external frontends.
++ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
++ **External Communication:** Manage communication with frontend.
 + **Manual Testing:** Postman used for endpoint testing.
-+ **Swagger Documentation:** API documentation integrated for streamlined development.
-+ **Environment Configuration:** Variables have been adjusted for optimal flexibility.
++ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
++ **Environment Configuration:** Configurations have been adjusted for enhanced flexibility.
 + **Dockerization:** The application is containerized for consistent deployment.
 
 <br/>
 
 <h2 id="releases">🚢 Releases</h2> 
+
+&nbsp; [![.](https://img.shields.io/badge/3.0.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.0)
 
 &nbsp; [![.](https://img.shields.io/badge/2.0.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/2.0.0)
 
@@ -120,10 +147,6 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 docker-compose -p micro up -d --build
 
 docker-compose -p micro down
-
-docker-compose -p micro up -d frontend
-
-docker-compose ls
 ```
 
 <br/>
