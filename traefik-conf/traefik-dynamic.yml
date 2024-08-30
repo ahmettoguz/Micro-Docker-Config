@@ -1,0 +1,63 @@
+tls:
+  stores:
+    default:
+      defaultCertificate:
+        certFile: /etc/traefik/certs/selfsigned.crt
+        keyFile: /etc/traefik/certs/selfsigned.key
+
+http:
+  routers:
+    traefik:
+      rule: "Host(`traefik.localhost`)"
+      entryPoints: websecure
+      service: api@internal
+      tls: true
+
+    frontend:
+      rule: "Host(`frontend.localhost`)"
+      entryPoints: websecure
+      service: frontend-service
+      tls: true
+
+    backend:
+      rule: "Host(`backend.localhost`)"
+      entryPoints: websecure
+      service: backend-service
+      tls: true
+
+    email-service:
+      rule: "Host(`email.localhost`)"
+      entryPoints: websecure
+      service: email-service-service
+      tls: true
+
+  services:
+    frontend-service:
+      loadBalancer:
+        servers:
+          - url: "http://micro-frontend-container:80"
+          - url: "http://host.docker.internal:5173"
+        healthCheck:
+          path: /
+          interval: "10s"
+          timeout: "6s"
+
+    backend-service:
+      loadBalancer:
+        servers:
+          - url: "http://micro-backend-container:80"
+          - url: "http://host.docker.internal:8081"
+        healthCheck:
+          path: /api/health-check
+          interval: "10s"
+          timeout: "6s"
+
+    email-service-service:
+      loadBalancer:
+        servers:
+          - url: "http://micro-email-container:80"
+          - url: "http://host.docker.internal:8082"
+        healthCheck:
+          path: /email/health-check
+          interval: "10s"
+          timeout: "6s"
