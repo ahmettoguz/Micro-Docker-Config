@@ -1,28 +1,37 @@
-version: '3.8'
+version: "3.8"
 services:
+  reverse-proxy:
+    image: traefik
+    container_name: reverse-proxy
+    command: --api.insecure=true --providers.docker
+    ports:
+      - 80:80
+      - 443:443
+      # - 9000:8080 # dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik-conf/traefik.yml:/traefik.yml
+      - ./traefik-conf/traefik-dynamic.yml:/etc/traefik/dynamic/traefik-dynamic.yml
+      - ./cert/selfsigned.crt:/etc/traefik/certs/selfsigned.crt
+      - ./cert/selfsigned.key:/etc/traefik/certs/selfsigned.key
 
   frontend:
     build: ../Micro-Frontend/
     image: micro-frontend-image
     container_name: micro-frontend-container
-    ports:
-      - "8080:80"
-    depends_on:
-      - backend
+    # ports:
+    #   - "8000:80"
 
   backend:
     build: ../Micro-Backend/
     image: micro-backend-image
     container_name: micro-backend-container
-    ports:
-      - "8081:80"
+    # ports:
+    #   - "8081:80"
 
   email-service:
     build: ../Micro-Email-Service/
     image: micro-email-image
     container_name: micro-email-container
-    ports:
-      - "8082:80"
-    depends_on:
-      - backend
-      - frontend
+    # ports:
+    #   - "8082:80"
