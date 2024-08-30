@@ -48,6 +48,7 @@
 
 ### Backend
 
++ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
 + **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
 + **Environment Variables:** Configurations have been adjusted for enhanced flexibility.
@@ -56,6 +57,7 @@
 
 ### Email Service
 
++ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
 + **Manual Testing:** Postman used for endpoint testing.
 + **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
