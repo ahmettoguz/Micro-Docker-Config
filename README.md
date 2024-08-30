@@ -67,11 +67,23 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 <h2 id="features">🔥 Features</h2>
 
+### Configuration
+
++ **Traefik Load Balancing:** Load balancing configured through Traefik for improved scalability and also local service development.
++ **Traefik Router:** Routing configured through Traefik for service communication without exposing port to public.
++ **Centralized SSL Security:** Centralized self-signed SSL certificate configuration across all services.
++ **Traefik Dashboard:** Dashboard integrated for monitoring and managing Traefik services, routers and prefixes.
++ **Traefik Integration:** Traefik integrated for networking.
++ **Docker-Compose Configuration:** Comprehensive Docker-Compose configuration for managing service orchestration.
++ **Docker Containerization:** The application is containerized for consistent deployment.
+
 ### Frontend
 
-+ **External Communication:** Manages interaction between backend and email service.
-+ **Global State Management:** Implemented using Redux for consistent state handling across the application.
-+ **Persistent Settings:** Language, theme mode, and theme schema are remembered using localStorage.
++ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
++ **Traefik Integration:** Integration with Traefik for efficient load balancing and port forwarding within the application's microservices architecture.
++ **External Communication:** Manages communication between backend and email service.
++ **Global State Management:** Redux implementation for consistent state handling across the application.
++ **Persistent Settings:** Language, theme mode, and theme schema are stored in localStorage.
 + **Internationalization:** Language support with i18n for a multilingual user experience.
 + **Custom Scrollbar Design:** Unique scrollbar styling to match the application's aesthetic.
 + **Floating Action Button:** A "Go to Top" button for improved navigation.
@@ -84,27 +96,31 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 + **Responsive Design:** Optimized for different screen sizes and devices.
 + **Material-UI Integration:** Extensive use of Material-UI components.
 + **Environment Variables:** Support for environment variables to manage configurations.
-+ **Docker Containerization:** The application has been containerized using Docker.
-+ **Backend Integration:** Integration with the backend is complete.
++ **Docker Containerization:** The application is containerized for consistent deployment.
++ **Backend Integration:** Integration with the backend service.
 
 ### Backend
 
++ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
-+ **Swagger Documentation:** Comprehensive API documentation integrated for easier development.
++ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
 + **Environment Variables:** Configurations have been adjusted for enhanced flexibility.
-+ **Dockerized Application:** The application is containerized for consistent deployment and scaling.
++ **Dockerized Application:** The application is containerized for consistent deployment.
 
 ### Email Service
 
-+ **External Frontend Communication:** Seamlessly integrates with external frontends.
++ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
++ **External Communication:** Manage communication with frontend.
 + **Manual Testing:** Postman used for endpoint testing.
-+ **Swagger Documentation:** API documentation integrated for streamlined development.
-+ **Environment Configuration:** Variables have been adjusted for optimal flexibility.
++ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
++ **Environment Configuration:** Configurations have been adjusted for enhanced flexibility.
 + **Dockerization:** The application is containerized for consistent deployment.
 
 <br/>
 
 <h2 id="releases">🚢 Releases</h2> 
+
+&nbsp; [![.](https://img.shields.io/badge/3.0.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.0)
 
 &nbsp; [![.](https://img.shields.io/badge/2.0.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/2.0.0)
 
@@ -121,7 +137,9 @@ docker-compose -p micro up -d --build
 
 docker-compose -p micro down
 
-docker-compose -p micro up -d frontend
+docker-compose -p micro up -d reverse-proxy --build
+
+docker-compose -p micro down reverse-proxy
 
 docker-compose ls
 ```
