@@ -1,4 +1,4 @@
-<h1 id="top" align="center">🚢 Release Version 2.0.0 </h1> 
+<h1 id="top" align="center">🚢 Release Version 3.0.0 </h1> 
 
 <br/>
 
@@ -15,10 +15,10 @@
 
 | Service               | Version                                                                                                                                                                           |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Micro-Docker-Config   | [![.](https://img.shields.io/badge/2.0.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/2.0.0)   |
+| Micro-Docker-Config   | [![.](https://img.shields.io/badge/3.0.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.0)   |
 | Micro-Backend         | [![.](https://img.shields.io/badge/1.2.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Backend/tree/release/1.2.0)         |
 | Micro-Email-Service   | [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Email-Service/tree/release/1.1.0)   |
-| Micro-Frontend        | [![.](https://img.shields.io/badge/2.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/2.1.0)        |
+| Micro-Frontend        | [![.](https://img.shields.io/badge/2.2.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/2.2.0)        |
 
 <br/>
 
@@ -26,9 +26,11 @@
 
 ### Frontend
 
-+ **External Communication:** Manages interaction between backend and email service.
-+ **Global State Management:** Implemented using Redux for consistent state handling across the application.
-+ **Persistent Settings:** Language, theme mode, and theme schema are remembered using localStorage.
++ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
++ **Traefik Integration:** Integration with Traefik for efficient load balancing and port forwarding within the application's microservices architecture.
++ **External Communication:** Manages communication between backend and email service.
++ **Global State Management:** Redux implementation for consistent state handling across the application.
++ **Persistent Settings:** Language, theme mode, and theme schema are stored in localStorage.
 + **Internationalization:** Language support with i18n for a multilingual user experience.
 + **Custom Scrollbar Design:** Unique scrollbar styling to match the application's aesthetic.
 + **Floating Action Button:** A "Go to Top" button for improved navigation.
@@ -41,23 +43,23 @@
 + **Responsive Design:** Optimized for different screen sizes and devices.
 + **Material-UI Integration:** Extensive use of Material-UI components.
 + **Environment Variables:** Support for environment variables to manage configurations.
-+ **Docker Containerization:** The application has been containerized using Docker.
-+ **Backend Integration:** Integration with the backend is complete.
++ **Docker Containerization:** The application is containerized for consistent deployment.
++ **Backend Integration:** Integration with the backend service.
 
 ### Backend
 
 + **External Communication:** Manage communication with frontend.
-+ **Swagger Documentation:** Comprehensive API documentation integrated for easier development.
++ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
 + **Environment Variables:** Configurations have been adjusted for enhanced flexibility.
-+ **Dockerized Application:** The application is containerized for consistent deployment and scaling.
++ **Dockerized Application:** The application is containerized for consistent deployment.
 
 
 ### Email Service
 
 + **External Communication:** Manage communication with frontend.
 + **Manual Testing:** Postman used for endpoint testing.
-+ **Swagger Documentation:** API documentation integrated for streamlined development.
-+ **Environment Configuration:** Variables have been adjusted for optimal flexibility.
++ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
++ **Environment Configuration:** Configurations have been adjusted for enhanced flexibility.
 + **Dockerization:** The application is containerized for consistent deployment.
   
 <br/>
@@ -65,16 +67,16 @@
 <h2 id="next-release-features">🚧 Next Release Features</h2>
 
 ### Frontend
-- Internal communication between backend service.
-- TLS/HTTPS support.
+- Animated counter
+- Scroll reveal
 
 ### Backend
-- Internal communication with frontend.
-- TLS/HTTPS support.
+- Postman requests
+
 
 ### Email Service
-- Internal communication with frontend.
-- TLS/HTTPS support.
+- Authentication
+
   
 <br/>
   
@@ -92,4 +94,4 @@ docker-compose -p micro down reverse-proxy
 docker-compose ls
 ```
 
-[🔝](#top)
+### [🔝](#top)
