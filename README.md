@@ -112,6 +112,7 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 ### Backend
 
++ **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
 + **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
 + **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
@@ -120,6 +121,7 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 ### Email Service
 
++ **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
 + **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
 + **Manual Testing:** Postman used for endpoint testing.
