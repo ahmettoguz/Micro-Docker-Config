@@ -48,7 +48,7 @@ http:
           - url: "http://micro-backend-container:80"
           - url: "http://host.docker.internal:8081"
         healthCheck:
-          path: /api/health-check
+          path: /health-check
           interval: "10s"
           timeout: "6s"
 
@@ -58,6 +58,6 @@ http:
           - url: "http://micro-email-container:80"
           - url: "http://host.docker.internal:8082"
         healthCheck:
-          path: /email/health-check
+          path: /health-check
           interval: "10s"
           timeout: "6s"
