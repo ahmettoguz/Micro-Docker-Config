@@ -1,4 +1,4 @@
-<h1 id="top" align="center">🚢 Release Version 3.0.0 </h1> 
+<h1 id="top" align="center">🚢 Release Version 3.0.1 </h1> 
 
 <br/>
 
@@ -15,10 +15,10 @@
 
 | Service               | Version                                                                                                                                                                           |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Micro-Docker-Config   | [![.](https://img.shields.io/badge/3.0.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.0)   |
-| Micro-Backend         | [![.](https://img.shields.io/badge/1.2.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Backend/tree/release/1.2.0)         |
-| Micro-Email-Service   | [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Email-Service/tree/release/1.1.0)   |
-| Micro-Frontend        | [![.](https://img.shields.io/badge/2.2.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/2.2.0)        |
+| Micro-Docker-Config   | [![.](https://img.shields.io/badge/3.0.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.1)   |
+| Micro-Backend         | [![.](https://img.shields.io/badge/1.2.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Backend/tree/release/1.2.1)         |
+| Micro-Email-Service   | [![.](https://img.shields.io/badge/1.1.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Email-Service/tree/release/1.1.1)   |
+| Micro-Frontend        | [![.](https://img.shields.io/badge/2.3.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/2.3.0)        |
 
 <br/>
 
@@ -26,6 +26,7 @@
 
 ### Frontend
 
++ **Custom Modal:** Includes a custom modal component with configurable actions to enhance user interaction.
 + **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **Traefik Integration:** Integration with Traefik for efficient load balancing and port forwarding within the application's microservices architecture.
 + **External Communication:** Manages communication between backend and email service.
@@ -43,26 +44,26 @@
 + **Responsive Design:** Optimized for different screen sizes and devices.
 + **Material-UI Integration:** Extensive use of Material-UI components.
 + **Environment Variables:** Support for environment variables to manage configurations.
-+ **Docker Containerization:** The application is containerized for consistent deployment.
++ **Dockerization:** The application is containerized for consistent deployment and scaling.
 + **Backend Integration:** Integration with the backend service.
 
 ### Backend
 
 + **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
-+ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
-+ **Environment Variables:** Configurations have been adjusted for enhanced flexibility.
-+ **Dockerized Application:** The application is containerized for consistent deployment.
-
++ **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
++ **Swagger Documentation:** Comprehensive API documentation integrated for documentation and testing purposes.
++ **Environment Configuration:** Configurations have been adjusted for enhanced flexibility.
++ **Dockerization:** The application is containerized for consistent deployment and scaling.
 
 ### Email Service
 
 + **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
-+ **Manual Testing:** Postman used for endpoint testing.
-+ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
++ **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
++ **Swagger Documentation:** Comprehensive API documentation integrated for documentation and testing purposes.
 + **Environment Configuration:** Configurations have been adjusted for enhanced flexibility.
-+ **Dockerization:** The application is containerized for consistent deployment.
++ **Dockerization:** The application is containerized for consistent deployment and scaling.
   
 <br/>
 
@@ -75,11 +76,9 @@
 ### Backend
 - Postman requests
 
-
 ### Email Service
 - Authentication
 
-  
 <br/>
   
 <h2 id="system-startup">🚀 System Startup</h2> 
