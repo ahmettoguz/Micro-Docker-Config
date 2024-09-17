@@ -7,6 +7,7 @@
 - [Service Versions](#service-versions)
 - [Features](#features)
 - [Next Release Features](#next-release-features)
+- [System Links](#system-links)
 - [System Preperation](#system-preperation)
 - [System Startup](#system-startup)
  
@@ -82,7 +83,27 @@
 
 <br/>
 
+<h2 id="system-links">🔗 System Links</h2> 
+
+| Service            | URL                                                |
+|--------------------|----------------------------------------------------|
+| Frontend           | https://frontend.localhost                         |
+| Traefik Dashboard  | https://traefik.localhost                          |
+| Backend Swagger UI | https://backend.localhost/sw/swagger-ui/index.html |
+| Email Swagger UI   | https://email.localhost/sw/swagger-ui/index.html   |
+
+<br/>
+
 <h2 id="system-preperation">🔧 System Preperation</h2>
+
+### Docker Config
+* Get selfsigned certification with Openssl.
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out selfsigned.crt
+```
+* Place `selfsigned.key` and `selfsigned.crt` file into /crt folder.
+
+<br/>
 
 ### Frontend
 * To change system configs revise .env file.
