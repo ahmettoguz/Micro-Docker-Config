@@ -12,6 +12,7 @@
 - [Technologies](#technologies)
 - [Features](#features)
 - [Releases](#releases)
+- [System Preperation](#system-preperation)
 - [System Startup](#system-startup)
 - [Contributors](#contributors)
  
@@ -90,6 +91,7 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 ### Frontend
 
++ **Custom Modal:** Includes a custom modal component with configurable actions to enhance user interaction.
 + **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **Traefik Integration:** Integration with Traefik for efficient load balancing and port forwarding within the application's microservices architecture.
 + **External Communication:** Manages communication between backend and email service.
@@ -107,27 +109,26 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 + **Responsive Design:** Optimized for different screen sizes and devices.
 + **Material-UI Integration:** Extensive use of Material-UI components.
 + **Environment Variables:** Support for environment variables to manage configurations.
-+ **Docker Containerization:** The application is containerized for consistent deployment.
++ **Dockerization:** The application is containerized for consistent deployment and scaling.
 + **Backend Integration:** Integration with the backend service.
 
 ### Backend
 
-+ **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
 + **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
-+ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
-+ **Environment Variables:** Configurations have been adjusted for enhanced flexibility.
-+ **Dockerized Application:** The application is containerized for consistent deployment.
++ **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
++ **Swagger Documentation:** Comprehensive API documentation integrated for documentation and testing purposes.
++ **Environment Configuration:** Configurations have been adjusted for enhanced flexibility.
++ **Dockerization:** The application is containerized for consistent deployment and scaling.
 
 ### Email Service
 
-+ **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
 + **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
 + **External Communication:** Manage communication with frontend.
-+ **Manual Testing:** Postman used for endpoint testing.
-+ **Swagger Documentation:** Endpoint documentation integrated for documentation and testing purposes.
++ **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
++ **Swagger Documentation:** Comprehensive API documentation integrated for documentation and testing purposes.
 + **Environment Configuration:** Configurations have been adjusted for enhanced flexibility.
-+ **Dockerization:** The application is containerized for consistent deployment.
++ **Dockerization:** The application is containerized for consistent deployment and scaling.
 
 <br/>
 
@@ -143,12 +144,52 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 <br/>
 
+<h2 id="system-preperation">🔧 System Preperation</h2>
+
+### Frontend
+* To change system configs revise .env file.
+  
+<br/>
+
+### Backend
+#### Production
+* Copy `application-dev.properties` to create `application-prod.properties`.
+* Change `app.var.appMode` to `prod`.
+* Change `server.port` to `80`.
+
+<br/>
+
+### Email Service
+#### Production
+* Copy `application-dev.properties` to create `application-prod.properties`.
+* Change `app.var.appMode` to `prod`.
+* Change `server.port` to `80`.
+* Place credentials.
+
+#### Development
+* Place credentials in the `application-dev.properties` file.
+
+<br/>
+
 <h2 id="system-startup">🚀 System Startup</h2> 
 
 ```
+docker-compose -p micro down
 docker-compose -p micro up -d --build
 
-docker-compose -p micro down
+docker-compose -p micro down reverse-proxy
+docker-compose -p micro up -d reverse-proxy --build
+
+docker-compose -p micro down frontend
+docker-compose -p micro up -d frontend --build
+
+docker-compose -p micro down backend
+docker-compose -p micro up -d backend --build
+
+docker-compose -p micro down email-service
+docker-compose -p micro up -d email-service --build
+
+docker-compose ls
 ```
 
 <br/>
