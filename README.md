@@ -168,6 +168,15 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 <h2 id="system-preperation">🔧 System Preperation</h2>
 
+### Docker Config
+* Get selfsigned certification with Openssl.
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out selfsigned.crt
+```
+* Place `selfsigned.key` and `selfsigned.crt` file into /crt folder.
+
+<br/>
+
 ### Frontend
 * To change system configs revise .env file.
   
