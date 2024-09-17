@@ -11,8 +11,8 @@
 - [About Project](#intro)
 - [Technologies](#technologies)
 - [Features](#features)
-- [Treafik Dashboard](#traefik-dashboard)
 - [Releases](#releases)
+- [Treafik Dashboard](#traefik-dashboard)
 - [System Preperation](#system-preperation)
 - [System Startup](#system-startup)
 - [Contributors](#contributors)
@@ -135,11 +135,6 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 <br/>
 
-<h2 id="traefik-dashboard">🚥 Traefik Dashboard</h2> 
-<img width=500 src="assets/traefik/traefikDashboard.png">
-
-<br/>
-
 <h2 id="releases">🚢 Releases</h2> 
 
 &nbsp; [![.](https://img.shields.io/badge/3.0.1-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.1)
@@ -151,6 +146,22 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 &nbsp; [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/1.1.0)
 
 &nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/1.0.0)
+
+<br/>
+
+<h2 id="traefik-dashboard">🚥 Traefik Dashboard</h2> 
+<img width=500 src="assets/traefik/traefikDashboard.png">
+
+<br/>
+
+<h2 id="system-links">🔗 System Links</h2> 
+
+| Service            | URL                                                |
+|--------------------|----------------------------------------------------|
+| Frontend           | https://frontend.localhost                         |
+| Traefik Dashboard  | https://traefik.localhost                          |
+| Backend Swagger UI | https://backend.localhost/sw/swagger-ui/index.html |
+| Email Swagger UI   | https://email.localhost/sw/swagger-ui/index.html   |
 
 <br/>
 
