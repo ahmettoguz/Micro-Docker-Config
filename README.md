@@ -7,6 +7,7 @@
 - [Service Versions](#service-versions)
 - [Features](#features)
 - [Next Release Features](#next-release-features)
+- [System Preperation](#system-preperation)
 - [System Startup](#system-startup)
  
 <br/>
@@ -80,8 +81,35 @@
 - Authentication
 
 <br/>
+
+<h2 id="system-preperation">🔧 System Preperation</h2>
+
+### Frontend
+* To change system configs revise .env file.
   
-<h2 id="system-startup">🚀 System Startup</h2> 
+<br/>
+
+### Backend
+#### Production
+* Copy `application-dev.properties` to create `application-prod.properties`.
+* Change `app.var.appMode` to `prod`.
+* Change `server.port` to `80`.
+
+<br/>
+
+### Email Service
+#### Production
+* Copy `application-dev.properties` to create `application-prod.properties`.
+* Change `app.var.appMode` to `prod`.
+* Change `server.port` to `80`.
+* Place credentials.
+
+#### Development
+* Place credentials in the `application-dev.properties` file.
+
+<br/>
+  
+<h2 id="system-startup">🚀 System Startup</h2>
 
 ```
 docker-compose -p micro down
