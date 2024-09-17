@@ -97,11 +97,19 @@
 <h2 id="system-preperation">🔧 System Preperation</h2>
 
 ### Docker Config
-* Get selfsigned certification with Openssl.
+#### Production
+* Obtain a domain name.
+* Update the domain name in the traefik-conf/docker-compose.yml file, replacing "localhost" with your domain.
+* Obtain a certificate for your domain.
+* Place the key files into `/crt` folder.
+* Update `docker-compose` and `traefik-conf/docker-compose.yml` files with key file names.
+  
+#### Development
+* Generate a self-signed certificate using OpenSSL.
 ```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out selfsigned.crt
 ```
-* Place `selfsigned.key` and `selfsigned.crt` file into /crt folder.
+* Place `selfsignd.key` and `selfsigned.crt` file into `/crt` folder.
 
 <br/>
 
