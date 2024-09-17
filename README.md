@@ -151,6 +151,10 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 <br/>
 
 <h2 id="traefik-dashboard">🚥 Traefik Dashboard</h2> 
+You can monitor and manage your services through the Traefik dashboard.
+
+To view the dashboard visit: [traefik](https://traefik.localhost).
+
 <img width=500 src="assets/traefik/traefikDashboard.png">
 
 <br/>
