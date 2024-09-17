@@ -11,6 +11,7 @@
 - [About Project](#intro)
 - [Technologies](#technologies)
 - [Features](#features)
+- [Treafik Dashboard](#traefik-dashboard)
 - [Releases](#releases)
 - [System Preperation](#system-preperation)
 - [System Startup](#system-startup)
@@ -134,7 +135,14 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 <br/>
 
+<h2 id="traefik-dashboard">🚥 Traefik Dashboard</h2> 
+<img width=500 src="assets/traefik/traefikDashboard.png">
+
+<br/>
+
 <h2 id="releases">🚢 Releases</h2> 
+
+&nbsp; [![.](https://img.shields.io/badge/3.0.1-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.1)
 
 &nbsp; [![.](https://img.shields.io/badge/3.0.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.0)
 
