@@ -14,7 +14,7 @@ http:
       tls: true
 
     frontend:
-      rule: "Host(`frontend.sendsphere.com.tr`)"
+      rule: "Host(`sendsphere.com.tr`)"
       entryPoints: websecure
       service: frontend-service
       tls: true
