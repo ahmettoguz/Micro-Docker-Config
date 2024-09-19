@@ -8,25 +8,25 @@ tls:
 http:
   routers:
     traefik:
-      rule: "Host(`traefik.localhost`)"
+      rule: "Host(`traefik.sendsphere.com.tr`)"
       entryPoints: websecure
       service: api@internal
       tls: true
 
     frontend:
-      rule: "Host(`frontend.localhost`)"
+      rule: "Host(`frontend.sendsphere.com.tr`)"
       entryPoints: websecure
       service: frontend-service
       tls: true
 
     backend:
-      rule: "Host(`backend.localhost`)"
+      rule: "Host(`backend.sendsphere.com.tr`)"
       entryPoints: websecure
       service: backend-service
       tls: true
 
     email-service:
-      rule: "Host(`email.localhost`)"
+      rule: "Host(`email.sendsphere.com.tr`)"
       entryPoints: websecure
       service: email-service-service
       tls: true
