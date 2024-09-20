@@ -22,7 +22,7 @@ http:
       tls: true
 
     backend:
-      rule: "Host(`localhost`) && PathPrefix(`/backend`) || (PathPrefix(`/api`))"
+      rule: "Host(`localhost`) && PathPrefix(`/backend`) || PathPrefix(`/sw`) && HeaderRegexp(`Referer`, `(?i).*backend.*`)"
       entryPoints: websecure
       service: backend-service
       tls: true
@@ -30,7 +30,7 @@ http:
         - strip-backend
 
     email-service:
-      rule: "Host(`localhost`) && PathPrefix(`/email`) || (PathPrefix(`/api`))"
+      rule: "Host(`localhost`) && PathPrefix(`/email`) || PathPrefix(`/sw`)"
       entryPoints: websecure
       service: email-service-service
       tls: true
