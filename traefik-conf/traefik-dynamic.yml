@@ -8,7 +8,7 @@ tls:
 http:
   routers:
     traefik:
-      rule: "Host(`localhost`) && PathPrefix(`/traefik`) || (PathPrefix(`/api`) || PathPrefix(`/dashboard`))"
+      rule: "Host(`localhost`) && PathPrefix(`/traefik`) || (PathPrefix(`/api`) || PathPrefix(`/dashboard`)) && HeaderRegexp(`Referer`, `(?i).*traefik.*`)"
       entryPoints: websecure
       service: api@internal
       tls: true
