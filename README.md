@@ -85,9 +85,12 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 ### Configuration
 
++ **Auto-Renewal of Trusted TLS Certificates:** Automatic renewal of trusted TLS certificates to ensure uninterrupted security in production environments.
++ **Trusted TLS Certificates:** Secure communication between services using trusted SSL certificates managed by Traefik for production environment.
++ **Self-Signed TLS Certificates:** Secure communication between services using self-signed SSL certificates managed by Traefik for local development.
 + **Traefik Load Balancing:** Load balancing configured through Traefik for improved scalability and also local service development.
 + **Traefik Router:** Routing configured through Traefik for service communication without exposing port to public.
-+ **Centralized SSL Security:** Centralized self-signed SSL certificate configuration across all services.
++ **Centralized TLS Security:** Centralized TLS certificate configuration across all services.
 + **Traefik Dashboard:** Dashboard integrated for monitoring and managing Traefik services, routers and prefixes.
 + **Traefik Integration:** Traefik integrated for networking.
 + **Docker-Compose Configuration:** Comprehensive Docker-Compose configuration for managing service orchestration.
@@ -138,6 +141,10 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 <h2 id="releases">🚢 Releases</h2> 
 
+&nbsp; [![.](https://img.shields.io/badge/v2-233838?style=flat&label=deploy&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/deploy-v1)
+
+&nbsp; [![.](https://img.shields.io/badge/v1-233838?style=flat&label=deploy&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/deploy-v2)
+
 &nbsp; [![.](https://img.shields.io/badge/3.0.1-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.1)
 
 &nbsp; [![.](https://img.shields.io/badge/3.0.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.0)
@@ -176,9 +183,18 @@ To view the dashboard visit: [`traefik`](https://traefik.localhost).
 #### Production
 * Obtain a domain name.
 * Update the domain name in the traefik-conf/docker-compose.yml file, replacing "localhost" with your domain.
-* Obtain a certificate for your domain.
+
+<br/>
+
+* Change permission of the `/crt/acme.json` file with `chmod 600` with deploy/v2.
+  
+or
+
+* Obtain a certificate for your domain with deploy/v1.
 * Place the key files into `/crt` folder.
 * Update `docker-compose` and `traefik-conf/docker-compose.yml` files with key file names.
+
+
   
 #### Development
 * Generate a self-signed certificate using OpenSSL.
