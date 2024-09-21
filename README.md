@@ -1,6 +1,9 @@
-## 🚀🚀🚀 Dev Commands 🚀🚀🚀
+## 🚀🚀🚀 Deploy Commands 🚀🚀🚀
 
 ```
+do not forget to change permission of the acme.json
+chmod 600 acme.json
+
 sudo docker compose -p micro down
 sudo docker compose -p micro up -d --build
 

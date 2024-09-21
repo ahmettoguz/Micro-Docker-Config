@@ -8,12 +8,10 @@ api:
   insecure: true
   debug: true
 
-#Logging
 log:
   # level: INFO
   level: DEBUG
 
-#Entrypoints
 entryPoints:
   web:
     address: ":80"
