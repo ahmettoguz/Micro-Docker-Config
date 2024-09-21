@@ -141,9 +141,9 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 <h2 id="releases">🚢 Releases</h2> 
 
-&nbsp; [![.](https://img.shields.io/badge/v2-233838?style=flat&label=deploy&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/deploy-v1)
+&nbsp; [![.](https://img.shields.io/badge/v2-233838?style=flat&label=deploy&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/deploy-v1)
 
-&nbsp; [![.](https://img.shields.io/badge/v1-233838?style=flat&label=deploy&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/deploy-v2)
+&nbsp; [![.](https://img.shields.io/badge/v1-233838?style=flat&label=deploy&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/deploy-v2)
 
 &nbsp; [![.](https://img.shields.io/badge/3.0.1-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.1)
 
