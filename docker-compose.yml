@@ -3,13 +3,7 @@ services:
   reverse-proxy:
     image: traefik
     container_name: reverse-proxy
-    command:
-      - --api.insecure=true
-      - --providers.docker
-      - --certificatesresolvers.le.acme.email=ahmettoguz@hotmail.com
-      - --certificatesresolvers.le.acme.storage=/etc/traefik/acme.json
-      - --certificatesresolvers.le.acme.httpchallenge.entrypoint=web
-      - --certificatesresolvers.le.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
+    command: --providers.docker
     ports:
       - 80:80
       - 443:443
@@ -18,7 +12,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik-conf/traefik.yml:/traefik.yml
       - ./traefik-conf/traefik-dynamic.yml:/etc/traefik/dynamic/traefik-dynamic.yml
-      - ./traefik-conf/acme.json:/etc/traefik/acme.json
+      - ./cert/acme.json:/etc/traefik/acme.json
 
   frontend:
     build: ../Micro-Frontend/
