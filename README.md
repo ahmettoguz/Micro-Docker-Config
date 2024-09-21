@@ -74,13 +74,7 @@
 ### Frontend
 - Animated counter
 - Scroll reveal
-
-### Backend
-- Postman requests
-
-### Email Service
-- Authentication
-
+- 
 <br/>
 
 <h2 id="system-links">🔗 System Links</h2> 
