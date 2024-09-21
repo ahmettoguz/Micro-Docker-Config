@@ -24,8 +24,8 @@ entryPoints:
           scheme: https
   websecure:
     address: ":443"
-    # tls:
-    #   certResolver: myresolver
+    tls:
+      certResolver: le
 
 # ACME Configuration
 certificatesResolvers:
