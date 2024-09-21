@@ -20,7 +20,7 @@
 | Micro-Docker-Config   | [![.](https://img.shields.io/badge/3.0.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.1)   |
 | Micro-Backend         | [![.](https://img.shields.io/badge/1.2.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Backend/tree/release/1.2.1)         |
 | Micro-Email-Service   | [![.](https://img.shields.io/badge/1.1.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Email-Service/tree/release/1.1.1)   |
-| Micro-Frontend        | [![.](https://img.shields.io/badge/2.3.0-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/2.3.0)        |
+| Micro-Frontend        | [![.](https://img.shields.io/badge/2.3.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/2.3.1)        |
 
 <br/>
 
