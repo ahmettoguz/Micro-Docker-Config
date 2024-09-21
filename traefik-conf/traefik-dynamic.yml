@@ -5,7 +5,7 @@ http:
       entryPoints: websecure
       service: api@internal
       tls:
-        certResolver: le
+        certResolver: lets
       middlewares:
         - strip-traefik
 
@@ -14,14 +14,14 @@ http:
       entryPoints: websecure
       service: frontend-service
       tls:
-        certResolver: le
+        certResolver: lets
 
     backend:
       rule: "Host(`sendsphere.com.tr`) && PathPrefix(`/backend`) || PathPrefix(`/sw`) && HeaderRegexp(`Referer`, `(?i).*backend.*`)"
       entryPoints: websecure
       service: backend-service
       tls:
-        certResolver: le
+        certResolver: lets
       middlewares:
         - strip-backend
 
@@ -30,7 +30,7 @@ http:
       entryPoints: websecure
       service: email-service-service
       tls:
-        certResolver: le
+        certResolver: lets
       middlewares:
         - strip-email
 
