@@ -1,4 +1,4 @@
-## 🚀🚀🚀 Dev Commands 🚀🚀🚀
+## 🚀🚀🚀 Deploy Commands 🚀🚀🚀
 
 ```
 sudo docker compose -p micro down

@@ -8,12 +8,10 @@ api:
   insecure: true
   debug: true
 
-#Logging
 log:
   # level: INFO
   level: DEBUG
 
-#Entrypoints
 entryPoints:
   web:
     address: ":80"
@@ -24,3 +22,11 @@ entryPoints:
           scheme: https
   websecure:
     address: ":443"
+
+certificatesResolvers:
+  lets:
+    acme:
+      email: ahmettoguz@hotmail.com
+      storage: /etc/traefik/acme.json
+      httpChallenge:
+        entryPoint: web

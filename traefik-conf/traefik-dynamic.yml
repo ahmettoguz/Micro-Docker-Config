@@ -1,17 +1,11 @@
-tls:
-  stores:
-    default:
-      defaultCertificate:
-        certFile: /etc/traefik/certs/fullchain.pem
-        keyFile: /etc/traefik/certs/privkey.pem
-
 http:
   routers:
     traefik:
       rule: "Host(`sendsphere.com.tr`) && PathPrefix(`/traefik`) || (PathPrefix(`/api`) || PathPrefix(`/dashboard`)) && HeaderRegexp(`Referer`, `(?i).*traefik.*`)"
       entryPoints: websecure
       service: api@internal
-      tls: true
+      tls:
+        certResolver: lets
       middlewares:
         - strip-traefik
 
@@ -19,13 +13,15 @@ http:
       rule: "Host(`sendsphere.com.tr`)"
       entryPoints: websecure
       service: frontend-service
-      tls: true
+      tls:
+        certResolver: lets
 
     backend:
       rule: "Host(`sendsphere.com.tr`) && PathPrefix(`/backend`) || PathPrefix(`/sw`) && HeaderRegexp(`Referer`, `(?i).*backend.*`)"
       entryPoints: websecure
       service: backend-service
-      tls: true
+      tls:
+        certResolver: lets
       middlewares:
         - strip-backend
 
@@ -33,7 +29,8 @@ http:
       rule: "Host(`sendsphere.com.tr`) && PathPrefix(`/email`) || PathPrefix(`/sw`)"
       entryPoints: websecure
       service: email-service-service
-      tls: true
+      tls:
+        certResolver: lets
       middlewares:
         - strip-email
 

@@ -3,7 +3,7 @@ services:
   reverse-proxy:
     image: traefik
     container_name: reverse-proxy
-    command: --api.insecure=true --providers.docker
+    command: --providers.docker
     ports:
       - 80:80
       - 443:443
@@ -12,8 +12,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik-conf/traefik.yml:/traefik.yml
       - ./traefik-conf/traefik-dynamic.yml:/etc/traefik/dynamic/traefik-dynamic.yml
-      - ./cert/fullchain.pem:/etc/traefik/certs/fullchain.pem
-      - ./cert/privkey.pem:/etc/traefik/certs/privkey.pem
+      - ./cert/acme.json:/etc/traefik/acme.json
 
   frontend:
     build: ../Micro-Frontend/
