@@ -74,17 +74,17 @@
 ### Frontend
 - Animated counter
 - Scroll reveal
-- 
+
 <br/>
 
 <h2 id="system-links">🔗 System Links</h2> 
 
 | Service            | URL                                                |
 |--------------------|----------------------------------------------------|
-| Frontend           | https://frontend.localhost                         |
-| Traefik Dashboard  | https://traefik.localhost                          |
-| Backend Swagger UI | https://backend.localhost/sw/swagger-ui/index.html |
-| Email Swagger UI   | https://email.localhost/sw/swagger-ui/index.html   |
+| Frontend           | https://localhost/                                 |
+| Traefik Dashboard  | https://localhost/traefik/dashboard/#/             |
+| Backend Swagger UI | https://localhost/backend/sw/swagger-ui/index.html |
+| Email Swagger UI   | https://localhost/email/sw/swagger-ui/index.html   |
 
 <br/>
 
