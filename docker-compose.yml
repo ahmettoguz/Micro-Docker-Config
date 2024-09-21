@@ -3,7 +3,7 @@ services:
   reverse-proxy:
     image: traefik
     container_name: reverse-proxy
-    command: --api.insecure=true --providers.docker
+    command: --providers.docker
     ports:
       - 80:80
       - 443:443
