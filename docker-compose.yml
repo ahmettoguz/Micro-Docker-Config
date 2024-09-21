@@ -3,7 +3,12 @@ services:
   reverse-proxy:
     image: traefik
     container_name: reverse-proxy
-    command: --api.insecure=true --providers.docker
+    command:
+      - --api.insecure=true
+      - --providers.docker
+      - --certificatesresolvers.myresolver.acme.email=ahmettoguz@hotmail.com
+      - --certificatesresolvers.myresolver.acme.storage=/etc/traefik/acme.json
+      - --certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web
     ports:
       - 80:80
       - 443:443
@@ -14,6 +19,7 @@ services:
       - ./traefik-conf/traefik-dynamic.yml:/etc/traefik/dynamic/traefik-dynamic.yml
       - ./cert/fullchain.pem:/etc/traefik/certs/fullchain.pem
       - ./cert/privkey.pem:/etc/traefik/certs/privkey.pem
+      - ./traefik-conf/acme.json:/etc/traefik/acme.json
 
   frontend:
     build: ../Micro-Frontend/
