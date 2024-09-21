@@ -27,7 +27,6 @@ entryPoints:
     tls:
       certResolver: le
 
-# ACME Configuration
 certificatesResolvers:
   le:
     acme:
@@ -35,5 +34,3 @@ certificatesResolvers:
       storage: /etc/traefik/acme.json
       httpChallenge:
         entryPoint: web
-      tlsChallenge: true
-      caServer: https://acme-staging-v02.api.letsencrypt.org/directory
