@@ -8,28 +8,34 @@ tls:
 http:
   routers:
     traefik:
-      rule: "Host(`traefik.localhost`)"
+      rule: "Host(`localhost`) && PathPrefix(`/traefik`) || (PathPrefix(`/api`) || PathPrefix(`/dashboard`)) && HeaderRegexp(`Referer`, `(?i).*traefik.*`)"
       entryPoints: websecure
       service: api@internal
       tls: true
+      middlewares:
+        - strip-traefik
 
     frontend:
-      rule: "Host(`frontend.localhost`)"
+      rule: "Host(`localhost`)"
       entryPoints: websecure
       service: frontend-service
       tls: true
 
     backend:
-      rule: "Host(`backend.localhost`)"
+      rule: "Host(`localhost`) && PathPrefix(`/backend`) || PathPrefix(`/sw`) && HeaderRegexp(`Referer`, `(?i).*backend.*`)"
       entryPoints: websecure
       service: backend-service
       tls: true
+      middlewares:
+        - strip-backend
 
     email-service:
-      rule: "Host(`email.localhost`)"
+      rule: "Host(`localhost`) && PathPrefix(`/email`) || PathPrefix(`/sw`)"
       entryPoints: websecure
       service: email-service-service
       tls: true
+      middlewares:
+        - strip-email
 
   services:
     frontend-service:
@@ -61,3 +67,17 @@ http:
           path: /health-check
           interval: "10s"
           timeout: "6s"
+
+  middlewares:
+    strip-traefik:
+      stripPrefix:
+        prefixes:
+          - "/traefik"
+    strip-backend:
+      stripPrefix:
+        prefixes:
+          - "/backend"
+    strip-email:
+      stripPrefix:
+        prefixes:
+          - "/email"
