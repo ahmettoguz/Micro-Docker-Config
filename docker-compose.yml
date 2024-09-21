@@ -6,9 +6,10 @@ services:
     command:
       - --api.insecure=true
       - --providers.docker
-      - --certificatesresolvers.myresolver.acme.email=ahmettoguz@hotmail.com
-      - --certificatesresolvers.myresolver.acme.storage=/etc/traefik/acme.json
-      - --certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web
+      - --certificatesresolvers.le.acme.email=ahmettoguz@hotmail.com
+      - --certificatesresolvers.le.acme.storage=/etc/traefik/acme.json
+      - --certificatesresolvers.le.acme.httpchallenge.entrypoint=web
+      - --certificatesresolvers.le.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
     ports:
       - 80:80
       - 443:443
