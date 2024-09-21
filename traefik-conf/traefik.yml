@@ -24,8 +24,6 @@ entryPoints:
           scheme: https
   websecure:
     address: ":443"
-    tls:
-      certResolver: le
 
 certificatesResolvers:
   le:
