@@ -184,7 +184,8 @@ To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashb
 ### Docker Config
 #### Production
 * Obtain a domain name.
-* Update the domain name in the traefik-conf/docker-compose.yml file, replacing "localhost" with your domain.
+* Update the domain name in the traefik-conf/traefik-dynamic.yml file, replacing "localhost" with your domain.
+* Place email address to traefik-conf/treafik.yml
 
 <br/>
 
@@ -192,11 +193,10 @@ To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashb
   
 or
 
+* Obtain a domain name.
 * Obtain a certificate for your domain with deploy/v1.
 * Place the key files into `/crt` folder.
 * Update `docker-compose` and `traefik-conf/docker-compose.yml` files with key file names.
-
-
   
 #### Development
 * Generate a self-signed certificate using OpenSSL.
