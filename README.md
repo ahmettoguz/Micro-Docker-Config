@@ -160,7 +160,7 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 <h2 id="traefik-dashboard">🚥 Traefik Dashboard</h2> 
 You can monitor and manage your services through the Traefik dashboard.
 
-To view the dashboard visit: [`traefik`](https://traefik.localhost).
+To view the dashboard visit: [`traefik`](https://sendphere.com.tr/traefik/dashboard/#/).
 
 <img width=500 src="assets/traefik/traefikDashboard.png">
 
@@ -168,12 +168,12 @@ To view the dashboard visit: [`traefik`](https://traefik.localhost).
 
 <h2 id="system-links">🔗 System Links</h2> 
 
-| Service            | URL                                                |
-|--------------------|----------------------------------------------------|
-| Frontend           | https://localhost/                                 |
-| Traefik Dashboard  | https://localhost/traefik/dashboard/#/             |
-| Backend Swagger UI | https://localhost/backend/sw/swagger-ui/index.html |
-| Email Swagger UI   | https://localhost/email/sw/swagger-ui/index.html   |
+| Service            | URL                                                       |
+|--------------------|-----------------------------------------------------------|
+| Frontend           | https://sendphere.com.tr/                                 |
+| Traefik Dashboard  | https://sendphere.com.tr/traefik/dashboard/#/             |
+| Backend Swagger UI | https://sendphere.com.tr/backend/sw/swagger-ui/index.html |
+| Email Swagger UI   | https://sendphere.com.tr/email/sw/swagger-ui/index.html   |
 
 <br/>
 
@@ -182,7 +182,7 @@ To view the dashboard visit: [`traefik`](https://traefik.localhost).
 ### Docker Config
 #### Production
 * Obtain a domain name.
-* Update the domain name in the traefik-conf/traefik-dynamic.yml file, replacing "localhost" with your domain.
+* Update the domain name in the traefik-conf/traefik-dynamic.yml file, replacing current domain name with your domain.
 * Place email address to traefik-conf/treafik.yml
 
 <br/>
