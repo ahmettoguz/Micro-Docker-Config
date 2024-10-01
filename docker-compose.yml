@@ -12,8 +12,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik-conf/traefik.yml:/traefik.yml
       - ./traefik-conf/traefik-dynamic.yml:/etc/traefik/dynamic/traefik-dynamic.yml
-      - ./cert/selfsigned.crt:/etc/traefik/certs/selfsigned.crt
-      - ./cert/selfsigned.key:/etc/traefik/certs/selfsigned.key
+      - ./cert/acme.json:/etc/traefik/acme.json
 
   frontend:
     build: ../Micro-Frontend/
