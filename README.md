@@ -186,9 +186,6 @@ To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashb
 * Obtain a domain name.
 * Update the domain name in the traefik-conf/traefik-dynamic.yml file, replacing current domain name with your domain.
 * Place email address to traefik-conf/treafik.yml
-
-<br/>
-
 * Change permission of the `/crt/acme.json` file with `chmod 600` with deploy/v2.
   
 or
