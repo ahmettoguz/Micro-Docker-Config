@@ -1,4 +1,4 @@
-<h1 id="top" align="center">🚢 Release Version 3.0.1 </h1> 
+<h1 id="top" align="center">🚢 Release Version 3.1.0 </h1> 
 
 <br/>
 
@@ -19,7 +19,7 @@
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Micro-Docker-Config   | [![.](https://img.shields.io/badge/3.0.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.0.1)   |
 | Micro-Backend         | [![.](https://img.shields.io/badge/1.2.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Backend/tree/release/1.2.1)         |
-| Micro-Email-Service   | [![.](https://img.shields.io/badge/1.1.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Email-Service/tree/release/1.1.1)   |
+| Micro-Email-Service   | [![.](https://img.shields.io/badge/1.1.2-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Email-Service/tree/release/1.1.2)   |
 | Micro-Frontend        | [![.](https://img.shields.io/badge/2.3.1-233838?style=flat&label=release&labelColor=4A154B&color=233838)](https://github.com/ahmettoguz/Micro-Frontend/tree/release/2.3.1)        |
 
 <br/>
@@ -79,12 +79,12 @@
 
 <h2 id="system-links">🔗 System Links</h2> 
 
-| Service            | URL                                                |
-|--------------------|----------------------------------------------------|
-| Frontend           | https://localhost/                                 |
-| Traefik Dashboard  | https://localhost/traefik/dashboard/#/             |
-| Backend Swagger UI | https://localhost/backend/sw/swagger-ui/index.html |
-| Email Swagger UI   | https://localhost/email/sw/swagger-ui/index.html   |
+| Service            | URL                                                        |
+|--------------------|------------------------------------------------------------|
+| Frontend           | https://sendpshere.com.tr/                                 |
+| Traefik Dashboard  | https://sendpshere.com.tr/traefik/dashboard/#/             |
+| Backend Swagger UI | https://sendpshere.com.tr/backend/sw/swagger-ui/index.html |
+| Email Swagger UI   | https://sendpshere.com.tr/email/sw/swagger-ui/index.html   |
 
 <br/>
 
@@ -122,6 +122,11 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out 
 
 ### Email Service
 #### Production
+* Go to your Google Account settings at [`myaccount.google.com`](https://myaccount.google.com/).
+* In the navigation panel, select [`Security`](https://myaccount.google.com/security).
+* Under `How you sign in to Google`, select `2-Step Verification`.
+* Add your phone number as a verification method.
+* Go to  [`myaccount.google.com/u/1/apppasswords`](https://myaccount.google.com/u/1/apppasswords) and generate a new app password.
 * Copy `application-dev.properties` to create `application-prod.properties`.
 * Change `app.var.appMode` to `prod`.
 * Change `server.port` to `80`.
