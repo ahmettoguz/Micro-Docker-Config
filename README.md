@@ -162,7 +162,7 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 <h2 id="traefik-dashboard">🚥 Traefik Dashboard</h2> 
 You can monitor and manage your services through the Traefik dashboard.
 
-To view the dashboard visit: [`traefik`](https://traefik.localhost).
+To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashboard/#/).
 
 <img width=500 src="assets/traefik/traefikDashboard.png">
 
@@ -170,12 +170,12 @@ To view the dashboard visit: [`traefik`](https://traefik.localhost).
 
 <h2 id="system-links">🔗 System Links</h2> 
 
-| Service            | URL                                                |
-|--------------------|----------------------------------------------------|
-| Frontend           | https://localhost/                                 |
-| Traefik Dashboard  | https://localhost/traefik/dashboard/#/             |
-| Backend Swagger UI | https://localhost/backend/sw/swagger-ui/index.html |
-| Email Swagger UI   | https://localhost/email/sw/swagger-ui/index.html   |
+| Service            | URL                                                        |
+|--------------------|------------------------------------------------------------|
+| Frontend           | https://sendpshere.com.tr/                                 |
+| Traefik Dashboard  | https://sendpshere.com.tr/traefik/dashboard/#/             |
+| Backend Swagger UI | https://sendpshere.com.tr/backend/sw/swagger-ui/index.html |
+| Email Swagger UI   | https://sendpshere.com.tr/email/sw/swagger-ui/index.html   |
 
 <br/>
 
