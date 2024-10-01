@@ -22,11 +22,3 @@ entryPoints:
           scheme: https
   websecure:
     address: ":443"
-
-certificatesResolvers:
-  lets:
-    acme:
-      email: <your email address>
-      storage: /etc/traefik/acme.json
-      httpChallenge:
-        entryPoint: web

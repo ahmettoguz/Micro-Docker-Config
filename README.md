@@ -141,8 +141,6 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 <h2 id="releases">🚢 Releases</h2> 
 
-&nbsp; [![.](https://img.shields.io/badge/3.1.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.1.0)
-
 &nbsp; [![.](https://img.shields.io/badge/v2-233838?style=flat&label=deploy&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/deploy-v1)
 
 &nbsp; [![.](https://img.shields.io/badge/v1-233838?style=flat&label=deploy&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/deploy-v2)
@@ -162,7 +160,7 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 <h2 id="traefik-dashboard">🚥 Traefik Dashboard</h2> 
 You can monitor and manage your services through the Traefik dashboard.
 
-To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashboard/#/).
+To view the dashboard visit: [`traefik`](https://traefik.localhost).
 
 <img width=500 src="assets/traefik/traefikDashboard.png">
 
@@ -170,12 +168,12 @@ To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashb
 
 <h2 id="system-links">🔗 System Links</h2> 
 
-| Service            | URL                                                        |
-|--------------------|------------------------------------------------------------|
-| Frontend           | https://sendpshere.com.tr/                                 |
-| Traefik Dashboard  | https://sendpshere.com.tr/traefik/dashboard/#/             |
-| Backend Swagger UI | https://sendpshere.com.tr/backend/sw/swagger-ui/index.html |
-| Email Swagger UI   | https://sendpshere.com.tr/email/sw/swagger-ui/index.html   |
+| Service            | URL                                                |
+|--------------------|----------------------------------------------------|
+| Frontend           | https://localhost/                                 |
+| Traefik Dashboard  | https://localhost/traefik/dashboard/#/             |
+| Backend Swagger UI | https://localhost/backend/sw/swagger-ui/index.html |
+| Email Swagger UI   | https://localhost/email/sw/swagger-ui/index.html   |
 
 <br/>
 
@@ -184,8 +182,7 @@ To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashb
 ### Docker Config
 #### Production
 * Obtain a domain name.
-* Update the domain name in the traefik-conf/traefik-dynamic.yml file, replacing current domain name with your domain.
-* Place email address to traefik-conf/treafik.yml
+* Update the domain name in the traefik-conf/docker-compose.yml file, replacing "localhost" with your domain.
 
 <br/>
 
@@ -193,10 +190,11 @@ To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashb
   
 or
 
-* Obtain a domain name.
 * Obtain a certificate for your domain with deploy/v1.
 * Place the key files into `/crt` folder.
 * Update `docker-compose` and `traefik-conf/docker-compose.yml` files with key file names.
+
+
   
 #### Development
 * Generate a self-signed certificate using OpenSSL.
@@ -222,11 +220,6 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out 
 
 ### Email Service
 #### Production
-* Go to your Google Account settings at [`myaccount.google.com`](https://myaccount.google.com/).
-* In the navigation panel, select [`Security`](https://myaccount.google.com/security).
-* Under `How you sign in to Google`, select `2-Step Verification`.
-* Add your phone number as a verification method.
-* Go to  [`myaccount.google.com/u/1/apppasswords`](https://myaccount.google.com/u/1/apppasswords) and generate a new app password.
 * Copy `application-dev.properties` to create `application-prod.properties`.
 * Change `app.var.appMode` to `prod`.
 * Change `server.port` to `80`.
@@ -240,22 +233,22 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out 
 <h2 id="system-startup">🚀 System Startup</h2> 
 
 ```
-docker compose -p micro down
-docker compose -p micro up -d --build
+docker-compose -p micro down
+docker-compose -p micro up -d --build
 
-docker compose -p micro down reverse-proxy
-docker compose -p micro up -d reverse-proxy --build
+docker-compose -p micro down reverse-proxy
+docker-compose -p micro up -d reverse-proxy --build
 
-docker compose -p micro down frontend
-docker compose -p micro up -d frontend --build
+docker-compose -p micro down frontend
+docker-compose -p micro up -d frontend --build
 
-docker compose -p micro down backend
-docker compose -p micro up -d backend --build
+docker-compose -p micro down backend
+docker-compose -p micro up -d backend --build
 
-docker compose -p micro down email-service
-docker compose -p micro up -d email-service --build
+docker-compose -p micro down email-service
+docker-compose -p micro up -d email-service --build
 
-docker compose ls
+docker-compose ls
 ```
 
 <br/>
