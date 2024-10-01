@@ -205,7 +205,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out 
 <br/>
 
 ### Frontend
-* To change system configs revise .env file.
+* To change system configs such as endpoint urls revise .env file.
   
 <br/>
 
