@@ -108,7 +108,7 @@ or
 <br/>
 
 ### Frontend
-* To change system configs revise .env file.
+* To change system configs such as endpoint urls revise .env file.
   
 <br/>
 
