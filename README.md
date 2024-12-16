@@ -187,34 +187,20 @@ To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashb
 
 #### Micro Docker Config
 
-* Generate a self-signed certificate using OpenSSL.
-```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out selfsigned.crt
-```
-* Place `selfsignd.key` and `selfsigned.crt` file into `/crt` folder.
+* Update the domain name in the `traefik-conf/traefik-dynamic.yml` file, replacing current domain name with your domain name such as localhost.
+* Place email address to `traefik-conf/treafik.yml`.
 
 <br/>
 
 #### Micro Frontend
 
-* To change system configs such as endpoint urls, modify .env file.
+* To change system configs such as endpoint urls, modify `.env` file.
   
-<br/>
-
-#### Micro Backend
-```
-mvnw spring-boot:run
-```
-
 <br/>
 
 #### Micro Email Service
 
 * Place credentials in the `application-dev.properties` file.
-
-```
-mvnw spring-boot:run
-```
 
 <br/>
 
@@ -223,15 +209,15 @@ mvnw spring-boot:run
 #### Micro Docker Config
 
 * Obtain a domain name.
-* Update the domain name in the traefik-conf/traefik-dynamic.yml file, replacing current domain name with your domain.
-* Place email address to traefik-conf/treafik.yml
+* Update the domain name in the `traefik-conf/traefik-dynamic.yml` file, replacing current domain name with your domain.
+* Place email address to `traefik-conf/treafik.yml`.
 * Change permission of the `/crt/acme.json` file with `chmod 600`.
 
 <br/>
 
 #### Micro Frontend
 
-* To change system configs such as endpoint urls, modify .env file.
+* To change system configs such as endpoint urls, modify `.env` file.
 
 <br/>
 
