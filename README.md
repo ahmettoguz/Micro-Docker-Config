@@ -160,7 +160,7 @@ This project aims to design a microarchitecture that integrates client-side and 
 <br/>
 
 <h2 id="traefik-dashboard">🚥 Traefik Dashboard</h2> 
-You can monitor and manage your services through the Traefik dashboard.
+Monitor and manage services through the Traefik dashboard.
 
 To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashboard/#/).
 
@@ -172,10 +172,10 @@ To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashb
 
 | Service            | URL                                                        |
 |--------------------|------------------------------------------------------------|
-| Frontend           | https://sendpshere.com.tr/                                 |
-| Traefik Dashboard  | https://sendpshere.com.tr/traefik/dashboard/#/             |
-| Backend Swagger UI | https://sendpshere.com.tr/backend/sw/swagger-ui/index.html |
-| Email Swagger UI   | https://sendpshere.com.tr/email/sw/swagger-ui/index.html   |
+| Frontend           | https://sendsphere.com.tr/                                 |
+| Traefik Dashboard  | https://sendsphere.com.tr/traefik/dashboard/#/             |
+| Backend Swagger UI | https://sendsphere.com.tr/backend/sw/swagger-ui/index.html |
+| Email Swagger UI   | https://sendsphere.com.tr/email/sw/swagger-ui/index.html   |
 
 <br/>
 
