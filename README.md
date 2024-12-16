@@ -181,21 +181,12 @@ To view the dashboard visit: [`traefik`](https://sendsphere.com.tr/traefik/dashb
 
 <h2 id="system-preperation">🔧 System Preperation</h2>
 
-### Docker Config
-#### Production
-* Obtain a domain name.
-* Update the domain name in the traefik-conf/traefik-dynamic.yml file, replacing current domain name with your domain.
-* Place email address to traefik-conf/treafik.yml
-* Change permission of the `/crt/acme.json` file with `chmod 600` with deploy/v2.
-  
-or
+<br/>
 
-* Obtain a domain name.
-* Obtain a certificate for your domain with deploy/v1.
-* Place the key files into `/crt` folder.
-* Update `docker-compose` and `traefik-conf/docker-compose.yml` files with key file names.
-  
-#### Development
+<h3 id="developer-mode">🧪 Developer Mode</h3>
+
+#### Micro Docker Config
+
 * Generate a self-signed certificate using OpenSSL.
 ```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out selfsigned.crt
@@ -204,21 +195,56 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out 
 
 <br/>
 
-### Frontend
-* To change system configs such as endpoint urls revise .env file.
+#### Micro Frontend
+
+* To change system configs such as endpoint urls, modify .env file.
   
 <br/>
 
-### Backend
-#### Production
-* Copy `application-dev.properties` to create `application-prod.properties`.
-* Change `app.var.appMode` to `prod`.
-* Change `server.port` to `80`.
+#### Micro Backend
+```
+mvnw spring-boot:run
+```
 
 <br/>
 
-### Email Service
-#### Production
+#### Micro Email Service
+
+* Place credentials in the `application-dev.properties` file.
+
+```
+mvnw spring-boot:run
+```
+
+<br/>
+
+<h3 id="production-mode">⚡Production Mode</h3> 
+
+#### Micro Docker Config
+
+* Obtain a domain name.
+* Update the domain name in the traefik-conf/traefik-dynamic.yml file, replacing current domain name with your domain.
+* Place email address to traefik-conf/treafik.yml
+* Change permission of the `/crt/acme.json` file with `chmod 600`.
+
+<br/>
+
+#### Micro Frontend
+
+* To change system configs such as endpoint urls, modify .env file.
+
+<br/>
+
+#### Micro Backend
+
+* Copy `application-dev.properties` to create `application-prod.properties`.
+* Change `app.var.appMode` to `prod`.
+* Change `server.port` to `80`.
+  
+<br/>
+
+#### Micro Email Service
+
 * Go to your Google Account settings at [`myaccount.google.com`](https://myaccount.google.com/).
 * In the navigation panel, select [`Security`](https://myaccount.google.com/security).
 * Under `How you sign in to Google`, select `2-Step Verification`.
@@ -228,9 +254,6 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout selfsigned.key -out 
 * Change `app.var.appMode` to `prod`.
 * Change `server.port` to `80`.
 * Place credentials.
-
-#### Development
-* Place credentials in the `application-dev.properties` file.
 
 <br/>
 
