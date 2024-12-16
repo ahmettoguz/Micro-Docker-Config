@@ -141,6 +141,8 @@ This project aims to design a microarchitecture that integrates client-side and 
 
 <h2 id="releases">🚢 Releases</h2> 
 
+&nbsp; [![.](https://img.shields.io/badge/3.2.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.2.0)
+
 &nbsp; [![.](https://img.shields.io/badge/3.1.0-233838?style=flat&label=release&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/release/3.1.0)
 
 &nbsp; [![.](https://img.shields.io/badge/v2-233838?style=flat&label=deploy&labelColor=470137&color=077521)](https://github.com/ahmettoguz/Micro-Docker-Config/tree/deploy-v1)
