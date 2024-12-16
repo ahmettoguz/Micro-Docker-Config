@@ -9,6 +9,15 @@ http:
       middlewares:
         - strip-traefik
 
+    www-to-non-www:
+      rule: "Host(`www.sendsphere.com.tr`)"
+      entryPoints: websecure
+      middlewares:
+        - www-to-non-www
+      service: api@internal
+      tls:
+        certResolver: lets
+
     frontend:
       rule: "Host(`sendsphere.com.tr`)"
       entryPoints: websecure
@@ -66,6 +75,11 @@ http:
           timeout: "6s"
 
   middlewares:
+    www-to-non-www:
+      redirectRegex:
+        regex: "^https?://www\\.(.*)"
+        replacement: "https://$1"
+        permanent: true
     strip-traefik:
       stripPrefix:
         prefixes:
