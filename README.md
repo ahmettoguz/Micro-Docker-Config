@@ -1,4 +1,4 @@
-## 🚀🚀🚀 Dev Commands 🚀🚀🚀
+## Dev Commands
 
 ```
 docker compose -p micro build
