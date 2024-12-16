@@ -26,7 +26,7 @@ http:
         - strip-backend
 
     email-service:
-      rule: "Host(`sendsphere.com.tr`) && PathPrefix(`/email`) || PathPrefix(`/sw`)"
+      rule: "Host(`sendsphere.com.tr`) && PathPrefix(`/email`) || PathPrefix(`/sw`) && HeaderRegexp(`Referer`, `(?i).*email.*`)"
       entryPoints: websecure
       service: email-service-service
       tls:
