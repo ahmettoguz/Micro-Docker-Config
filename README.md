@@ -22,7 +22,7 @@
 
 <h2 id="intro">📌 About Project</h2> 
 
-This project seeks to architect a cohesive microarchitecture that integrates frontend and backend systems, incorporates email services, manages databases, implements automated testing, utilizes Docker for containerization, applies TLS security protocols, and configures reverse proxies. 
+This project aims to design a microarchitecture that integrates client-side and server-side components, uses Docker for containerization, enforces TLS security protocols, and configures reverse proxies.
 
 <br/>
 
@@ -39,6 +39,14 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 &nbsp; [![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)](https://www.nginx.com/)
 
 &nbsp; [![Apache Tomcat](https://img.shields.io/badge/apache%20tomcat-%23F8DC75.svg?style=for-the-badge&logo=apache-tomcat&logoColor=black)](https://tomcat.apache.org/)
+
+### Build Tools
+
+&nbsp; [![Apache Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
+
+### Package Manager
+
+&nbsp; [![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
 ### Backend
 
@@ -74,38 +82,35 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 
 &nbsp; ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
+&nbsp; [![NodeJs](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
+
 ### Test
 
 &nbsp; [![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
-
 
 <br/>
 
 <h2 id="features">🔥 Features</h2>
 
-### Configuration
+### Micro Docker Config
 
++ **Centralized TLS Security:** Centralized TLS certificate configuration across all services.
 + **Auto-Renewal of Trusted TLS Certificates:** Automatic renewal of trusted TLS certificates to ensure uninterrupted security in production environments.
 + **Trusted TLS Certificates:** Secure communication between services using trusted SSL certificates managed by Traefik for production environment.
 + **Self-Signed TLS Certificates:** Secure communication between services using self-signed SSL certificates managed by Traefik for local development.
++ **Traefik Integration:** Traefik integrated for networking.
 + **Traefik Load Balancing:** Load balancing configured through Traefik for improved scalability and also local service development.
 + **Traefik Router:** Routing configured through Traefik for service communication without exposing port to public.
-+ **Centralized TLS Security:** Centralized TLS certificate configuration across all services.
 + **Traefik Dashboard:** Dashboard integrated for monitoring and managing Traefik services, routers and prefixes.
-+ **Traefik Integration:** Traefik integrated for networking.
 + **Docker-Compose Configuration:** Comprehensive Docker-Compose configuration for managing service orchestration.
-+ **Docker Containerization:** The application is containerized for consistent deployment.
 
-### Frontend
+### Micro Frontend
 
 + **Custom Modal:** Includes a custom modal component with configurable actions to enhance user interaction.
-+ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
-+ **Traefik Integration:** Integration with Traefik for efficient load balancing and port forwarding within the application's microservices architecture.
-+ **External Communication:** Manages communication between backend and email service.
 + **Global State Management:** Redux implementation for consistent state handling across the application.
-+ **Persistent Settings:** Language, theme mode, and theme schema are stored in localStorage.
++ **Persistent Data:** Language, theme mode, and theme schema are stored in localStorage.
 + **Internationalization:** Language support with i18n for a multilingual user experience.
-+ **Custom Scrollbar Design:** Unique scrollbar styling to match the application's aesthetic.
++ **Custom Scrollbar Design:** Custom scrollbar styling to match the application's aesthetic.
 + **Floating Action Button:** A "Go to Top" button for improved navigation.
 + **Multi-Message Snackbar:** Support for displaying multiple snackbars using notistack.
 + **Professional UI/UX:** Modern user interface and experience.
@@ -117,21 +122,16 @@ This project seeks to architect a cohesive microarchitecture that integrates fro
 + **Material-UI Integration:** Extensive use of Material-UI components.
 + **Environment Variables:** Support for environment variables to manage configurations.
 + **Dockerization:** The application is containerized for consistent deployment and scaling.
-+ **Backend Integration:** Integration with the backend service.
 
-### Backend
+### Micro Backend
 
-+ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
-+ **External Communication:** Manage communication with frontend.
 + **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
 + **Swagger Documentation:** Comprehensive API documentation integrated for documentation and testing purposes.
 + **Environment Configuration:** Configurations have been adjusted for enhanced flexibility.
 + **Dockerization:** The application is containerized for consistent deployment and scaling.
 
-### Email Service
+### Micro Email Service
 
-+ **TLS/HTTPS:** Centeralized TLS/HTTPS support for all services with selfsigned certificate.
-+ **External Communication:** Manage communication with frontend.
 + **Postman Endpoint Collection:** Postman collection added for ensure validation of all API endpoints.
 + **Swagger Documentation:** Comprehensive API documentation integrated for documentation and testing purposes.
 + **Environment Configuration:** Configurations have been adjusted for enhanced flexibility.
