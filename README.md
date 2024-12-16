@@ -103,6 +103,8 @@ This project aims to design a microarchitecture that integrates client-side and 
 + **Traefik Router:** Routing configured through Traefik for service communication without exposing port to public.
 + **Traefik Dashboard:** Dashboard integrated for monitoring and managing Traefik services, routers and prefixes.
 + **Docker-Compose Configuration:** Comprehensive Docker-Compose configuration for managing service orchestration.
++ **www to non-www Routing:** Traefik configured to handle routing from the 'www' subdomain to the non-www domain.
++ **Path Routing:** Traefik configured for path-based routing, directing traffic based on URL paths to specific services.
 
 ### Micro Frontend
 
